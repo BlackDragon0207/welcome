@@ -2,6 +2,6 @@
     "token": "토큰",
     "everyoneMention": false,
     "hostedBy": true,
-    "default_prefix": "!!!!",
+    "default_prefix": "접두사",
     "mongoose": "BlackDragon"
 }
