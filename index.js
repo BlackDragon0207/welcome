@@ -6,6 +6,8 @@ const { join } = require('path');
 const config = require('./config.json');
 client.config = config;
 const db = require('quick.db');
+const message = [' ']
+let current = 1;
 
 client.on('ready', () => {
     console.log('I am ready');
