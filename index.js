@@ -7,11 +7,20 @@ const config = require('./config.json');
 client.config = config;
 const db = require('quick.db');
 
-
 client.on('ready', () => {
     console.log('I am ready');
-    client.user.setActivity(`BlackDragon Community welcome`, { type: "WATCHING"})
+
+    setInterval(() => {
+        if(message[current]){
+            client.user.setActivity(`BlackDragon Community welcome`, { type: "WATCHING"})
+        current++;
+        }else{
+            current = 0;
+            client.user.setActivity(`커뮤니티에 오신것을 환영합니다!`, { type: "PLAYING"})
+        }
+    }, 5*1500)
 });
+
 
 client.on('guildMemberAdd', member => {
   if(member.guild.id != '436048224617365524') return;
