@@ -7,16 +7,7 @@ client.login('TOKEN')
 
 client.on('ready', () => {
     console.log('I am ready');
-
-    setInterval(() => {
-        if(message[current]){
-            client.user.setActivity(`BlackDragon Community welcome`, { type: "WATCHING"})
-        current++;
-        }else{
-            current = 0;
             client.user.setActivity(`커뮤니티에 오신것을 환영합니다!`, { type: "PLAYING"})
-        }
-    }, 5*1500)
 });
 
 
